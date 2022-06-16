@@ -7,25 +7,30 @@ public class No {
 	private No direito;
 	private int nivel;
 
-	public int getNivel() {
-		return nivel;
-	}
-
-	public boolean noFolha() {
-		return (direito == null && esquerdo == null);
-	}
-
-	public void setNivel(int nivel) {
-		this.nivel = nivel;
-	}
-
-	public No(int valor) {
+	public No(int valor) {		//construtor
 		this.valor = valor;
 	}
 
+	public boolean noFolha() {			//metodo
+		return (direito == null && esquerdo == null);
+	}
+
+	public void finalize() {
+		System.out.println("LIBERADO");
+	}
+
+
+	public int getNivel() {
+		return nivel;
+	} //get nivel
+
+	public void setNivel(int nivel) {
+		this.nivel = nivel;
+	}//set nivel
+
 	public int getValor() {
 		return valor;
-	}
+	} // get valor
 
 	public No getEsquerdo() {
 		return esquerdo;
@@ -43,7 +48,5 @@ public class No {
 		this.direito = direito;
 	}
 
-	public void finalize() {
-		System.out.println("LIBERADO");
-	}
+
 }
