@@ -69,9 +69,10 @@ public class ArvoreBinaria {
             aux = true;
         } else {
             if (raiz.getValor() > Valor) {
-                aux = buscarValor(raiz.getDireito(), Valor);
+				aux = buscarValor(raiz.getEsquerdo(), Valor);
+
             } else {
-                aux = buscarValor(raiz.getEsquerdo(), Valor);
+				aux = buscarValor(raiz.getDireito(), Valor);
             }
         }
         return aux;
