@@ -63,8 +63,20 @@ public class ArvoreBinaria {
 	}
 	
 	public boolean buscarValor(No raiz, int Valor) {
-		return false;
+		boolean aux = false;
 		
+		if(raiz == null) {
+			aux = false;
+		}else if(raiz.getValor() == Valor) {
+			aux = true;
+		}else {
+			if(raiz.getValor() > Valor) {
+				aux = buscarValor(raiz.getDireito(), Valor);
+			}else{
+				aux = buscarValor(raiz.getEsquerdo(), Valor);
+			}
+		}
+		return aux;
 	}
 
 	public void removeNo(No raiz, int Valor) {
