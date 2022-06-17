@@ -45,10 +45,10 @@ public class Laboratorio {
         if (dano < 3) {
             System.out.println("Que pena voce perdeu, Marshadow e invencivel");
         } else {
-            System.out.println("para bens você derrotou Marshadow");
+            System.out.println("para bens voce derrotou Marshadow");
         }
 
-        System.out.println("cartas que não foram advinhadas: ");
+        System.out.println("cartas que nao foram advinhadas: ");
         arvore.imprimeArvore(arvore.getRaiz());
         arvore.liberaMemoria(arvore.getRaiz());
 
