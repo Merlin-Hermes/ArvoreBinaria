@@ -28,6 +28,10 @@ public class No {
 		this.nivel = nivel;
 	}//set nivel
 
+	public void setValor(int valor) {
+		this.valor = valor;
+	}
+
 	public int getValor() {
 		return valor;
 	} // get valor
